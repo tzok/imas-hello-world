@@ -7,7 +7,7 @@ for IMAS. Examples are written in C++, Fortran, Java and Python.
 C++
 ---
 
-``` {.cpp}
+```cpp
 #include <UALClasses.h>
 
 int main() {
@@ -28,7 +28,7 @@ int main() {
 Fortran
 -------
 
-``` {.fortran}
+```fortran
 program test
     use ids_routines
 
@@ -53,7 +53,7 @@ end program test
 Java
 ----
 
-``` {.java}
+```java
 package pl.psnc.imas;
 
 import imasjava.imas;
@@ -78,7 +78,7 @@ public class HelloWorld {
 Python
 ------
 
-``` {.python}
+```python
 #! /usr/bin/env python
 import imas
 
