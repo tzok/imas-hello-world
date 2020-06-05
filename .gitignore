@@ -1,3 +1,5 @@
 Makefile
+HOWTO-pandoc.md
+HOWTO.html
 README-pandoc.md
 README.html
