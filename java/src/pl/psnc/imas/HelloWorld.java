@@ -10,7 +10,7 @@ public class HelloWorld {
         int pulseCtx = imas.createEnv(1, 1, "imas", "test", "3");
 
         summary s = new summary();
-        s.ids_properties.comment = "Hello World from Java!";
+        s.ids_properties.comment = "Hello World from Java";
         s.ids_properties.homogeneous_time = 1;
         s.time = new Vect1DDouble(new double[] { 0.1 });
 

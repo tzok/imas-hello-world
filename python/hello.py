@@ -6,7 +6,7 @@ if __name__ == '__main__':
     pulsefile.create_env('imas', 'test', '3')
 
     summary = pulsefile.summary
-    summary.ids_properties.comment = 'Hello World from Python!'
+    summary.ids_properties.comment = 'Hello World from Python'
     summary.ids_properties.homogeneous_time = 1
     summary.time.resize(1)
     summary.time[0] = 0.1

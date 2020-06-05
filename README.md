@@ -66,7 +66,7 @@ public class HelloWorld {
         int pulseCtx = imas.createEnv(1, 1, "imas", "test", "3");
 
         summary s = new summary();
-        s.ids_properties.comment = "Hello World from Java!";
+        s.ids_properties.comment = "Hello World from Java";
         s.ids_properties.homogeneous_time = 1;
         s.time = new Vect1DDouble(new double[] { 0.1 });
 
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     pulsefile.create_env('imas', 'test', '3')
 
     summary = pulsefile.summary
-    summary.ids_properties.comment = 'Hello World from Python!'
+    summary.ids_properties.comment = 'Hello World from Python'
     summary.ids_properties.homogeneous_time = 1
     summary.time.resize(1)
     summary.time[0] = 0.1
