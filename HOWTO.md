@@ -3,10 +3,26 @@ Introduction
 
 This guide describes how to use custom codes with IMAS Docker image.
 
+Requirements
+============
+
+-   Install [Docker](https://www.docker.com/) on your local computer:
+    follow the official
+    [documentation](https://docs.docker.com/get-docker/)
+
+-   Or [uDocker](https://github.com/indigo-dc/udocker) on an HPC
+    machine:
+
+        mkdir -p $HOME/.local/opt
+        wget https://github.com/indigo-dc/udocker/releases/download/devel3_1.2.4/udocker-1.2.4.tar.gz
+        tar xf udocker-1.2.4.tar.gz -C $HOME/.local/opt
+        export PATH=$PATH:$HOME/.local/opt/udocker
+
+        # to make the change permanent on current machine
+        echo 'export PATH=$PATH:$HOME/.local/opt/udocker' >> ~/.bashrc
+
 Steps
 =====
-
-Execute all of these steps on your local computer.
 
 1.  Get the IMAS Docker image:
 
@@ -18,9 +34,18 @@ Execute all of these steps on your local computer.
 
         xzcat imas-fc2k-latest.tar.xz | docker load
 
+    Or for uDocker on HPC:
+
+        xzcat imas-fc2k-latest.tar.xz | udocker load
+
 3.  Start an interactive session within the IMAS environment:
 
         docker run -it --rm imas/fc2k
+
+    Or for uDocker on HPC:
+
+        udocker create --name=imas imas/fc2k:3.28.1-4.7.3-2.5p5-3.1.1-4.10.1
+        udocker run imas
 
     **Note**: The session is ready to use from the start -- all
     necessary environment variables are set
