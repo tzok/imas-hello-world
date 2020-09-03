@@ -1,10 +1,13 @@
 program test
     use ids_routines
 
-    integer :: pulsectx, status;
-    type(ids_summary) :: summary;
+    character(32)       :: login
+    integer             :: pulsectx
+    integer             :: status
+    type(ids_summary)   :: summary
 
-    call ual_begin_pulse_action(MDSPLUS_BACKEND, 1, 1, 'imas', 'test', '3', pulsectx)
+    call getlog(login)
+    call ual_begin_pulse_action(MDSPLUS_BACKEND, 1, 1, login, 'test', '3', pulsectx)
     call ual_open_pulse(pulsectx, FORCE_CREATE_PULSE, '', status);
 
     allocate(summary%ids_properties%comment(1))
