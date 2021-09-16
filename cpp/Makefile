@@ -1,5 +1,5 @@
-CXXFLAGS	= -I$(IMAS_PREFIX)/include -pthread
-LDFLAGS		= -L$(IMAS_PREFIX)/lib -limas-cpp -limas
+CXXFLAGS	= -I$(IMAS_PREFIX)/include -pthread $(shell pkg-config --cflags blitz)
+LDFLAGS		= -L$(IMAS_PREFIX)/lib $(shell pkg-config --libs blitz) -limas-cpp -limas
 
 all: hello
 
